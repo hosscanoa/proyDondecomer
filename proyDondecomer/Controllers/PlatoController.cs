@@ -14,7 +14,7 @@ namespace proyDondecomer.Controllers
 {
     public class PlatoController : ApiController
     {
-        private dondeComerEntities1 db = new dondeComerEntities1();
+        private dondeComerEntities db = new dondeComerEntities();
         public PlatoController()
         {
             db.Configuration.ProxyCreationEnabled = false;

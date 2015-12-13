@@ -14,7 +14,7 @@ namespace proyDondecomer.Controllers
 {
     public class MenuController : ApiController
     {
-        private dondeComerEntities1 db = new dondeComerEntities1();
+        private dondeComerEntities db = new dondeComerEntities();
         public MenuController()
         {
             db.Configuration.ProxyCreationEnabled = false;

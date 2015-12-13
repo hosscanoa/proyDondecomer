@@ -14,7 +14,13 @@ namespace proyDondecomer.Models
     
     public partial class Usuario
     {
-          
+        public Usuario()
+        {
+            this.LikeMenu = new HashSet<LikeMenu>();
+            this.LikeProducto = new HashSet<LikeProducto>();
+            this.Restaurante = new HashSet<Restaurante>();
+        }
+    
         public int usuarioID { get; set; }
         public string nombre { get; set; }
         public string apellidos { get; set; }
@@ -22,9 +28,9 @@ namespace proyDondecomer.Models
         public string usuario1 { get; set; }
         public string password { get; set; }
         public string rol { get; set; }
-
-        public virtual List<LikeMenu> LikeMenu { get; set; }
-        public virtual List<LikeProducto> LikeProducto { get; set; }
-        public virtual List<Restaurante> Restaurante { get; set; }
+    
+        public virtual ICollection<LikeMenu> LikeMenu { get; set; }
+        public virtual ICollection<LikeProducto> LikeProducto { get; set; }
+        public virtual ICollection<Restaurante> Restaurante { get; set; }
     }
 }

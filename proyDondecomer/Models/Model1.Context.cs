@@ -13,10 +13,10 @@ namespace proyDondecomer.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class dondeComerEntities1 : DbContext
+    public partial class dondeComerEntities : DbContext
     {
-        public dondeComerEntities1()
-            : base("name=dondeComerEntities1")
+        public dondeComerEntities()
+            : base("name=dondeComerEntities")
         {
         }
     

@@ -14,6 +14,11 @@ namespace proyDondecomer.Models
     
     public partial class Producto
     {
+        public Producto()
+        {
+            this.LikeProducto = new HashSet<LikeProducto>();
+            this.Menu_Producto = new HashSet<Menu_Producto>();
+        }
     
         public int productoID { get; set; }
         public string nombre { get; set; }
@@ -22,8 +27,8 @@ namespace proyDondecomer.Models
         public Nullable<int> stock { get; set; }
         public string IMAGEN { get; set; }
         public string categoria { get; set; }
-
-        public virtual List<LikeProducto> LikeProducto { get; set; }
-        public virtual List<Menu_Producto> Menu_Producto { get; set; }
+    
+        public virtual ICollection<LikeProducto> LikeProducto { get; set; }
+        public virtual ICollection<Menu_Producto> Menu_Producto { get; set; }
     }
 }
