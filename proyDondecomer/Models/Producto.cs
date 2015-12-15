@@ -23,8 +23,6 @@ namespace proyDondecomer.Models
         public int productoID { get; set; }
         public string nombre { get; set; }
         public string descripcion { get; set; }
-        public Nullable<decimal> precio { get; set; }
-        public Nullable<int> stock { get; set; }
         public string IMAGEN { get; set; }
         public string categoria { get; set; }
     

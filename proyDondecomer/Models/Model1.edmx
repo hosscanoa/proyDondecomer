@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="dondeComerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="dondeComerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="LikeMenu">
           <Key>
             <PropertyRef Name="LikeMenuID" />
@@ -50,8 +50,6 @@
           <Property Name="productoID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nombre" Type="varchar" MaxLength="50" />
           <Property Name="descripcion" Type="text" />
-          <Property Name="precio" Type="money" />
-          <Property Name="stock" Type="int" />
           <Property Name="IMAGEN" Type="text" />
           <Property Name="categoria" Type="varchar" MaxLength="50" />
         </EntityType>
@@ -61,8 +59,11 @@
           </Key>
           <Property Name="restauranteID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nombre" Type="varchar" MaxLength="50" />
+          <Property Name="descripcion" Type="varchar" MaxLength="50" />
           <Property Name="lugar" Type="varchar" MaxLength="50" />
           <Property Name="telefono" Type="varchar" MaxLength="50" />
+          <Property Name="latitud" Type="varchar" MaxLength="50" />
+          <Property Name="longitud" Type="varchar" MaxLength="50" />
           <Property Name="usuarioID" Type="int" />
         </EntityType>
         <EntityType Name="Usuario">
@@ -214,8 +215,7 @@
             <End Role="Restaurante" EntitySet="Restaurante" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="dondeComerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -273,8 +273,6 @@
           <Property Name="productoID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-          <Property Name="precio" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="stock" Type="Int32" />
           <Property Name="IMAGEN" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <Property Name="categoria" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="LikeProducto" Relationship="Self.FK__LikeProdu__produ__22AA2996" FromRole="Producto" ToRole="LikeProducto" />
@@ -291,6 +289,9 @@
           <Property Name="usuarioID" Type="Int32" />
           <NavigationProperty Name="Menu" Relationship="Self.FK__Menu__pestaurant__173876EA" FromRole="Restaurante" ToRole="Menu" />
           <NavigationProperty Name="Usuario" Relationship="Self.FK__Restauran__usuar__1273C1CD" FromRole="Restaurante" ToRole="Usuario" />
+          <Property Name="descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="latitud" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="longitud" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Usuario">
           <Key>
@@ -498,8 +499,6 @@
                 <ScalarProperty Name="productoID" ColumnName="productoID" />
                 <ScalarProperty Name="nombre" ColumnName="nombre" />
                 <ScalarProperty Name="descripcion" ColumnName="descripcion" />
-                <ScalarProperty Name="precio" ColumnName="precio" />
-                <ScalarProperty Name="stock" ColumnName="stock" />
                 <ScalarProperty Name="IMAGEN" ColumnName="IMAGEN" />
                 <ScalarProperty Name="categoria" ColumnName="categoria" />
               </MappingFragment>
@@ -508,6 +507,9 @@
           <EntitySetMapping Name="Restaurante">
             <EntityTypeMapping TypeName="dondeComerModel.Restaurante">
               <MappingFragment StoreEntitySet="Restaurante">
+                <ScalarProperty Name="longitud" ColumnName="longitud" />
+                <ScalarProperty Name="latitud" ColumnName="latitud" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
                 <ScalarProperty Name="restauranteID" ColumnName="restauranteID" />
                 <ScalarProperty Name="nombre" ColumnName="nombre" />
                 <ScalarProperty Name="lugar" ColumnName="lugar" />

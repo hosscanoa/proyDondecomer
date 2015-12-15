@@ -24,6 +24,9 @@ namespace proyDondecomer.Models
         public string lugar { get; set; }
         public string telefono { get; set; }
         public Nullable<int> usuarioID { get; set; }
+        public string descripcion { get; set; }
+        public string latitud { get; set; }
+        public string longitud { get; set; }
     
         public virtual ICollection<Menu> Menu { get; set; }
         public virtual Usuario Usuario { get; set; }
