@@ -16,5 +16,12 @@ namespace proyDondecomer.Controllers
             return View();
         }
 
+        //Top 5 de restaurantes por frecuencia de personas
+        //Top 5 de restaurantes con más likes
+        //Top 5 de menus más consumidos
+        //El menu más consumido por mes
+        //El restaurante más visitado por mes
+        //
+
     }
 }
