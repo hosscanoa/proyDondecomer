@@ -1,8 +1,8 @@
 
-CREATE DATABASE dondeComer
-go
+--CREATE DATABASE dondeComer
+--go
 
-USE dondeComer;
+--USE dondeComer;
 
 CREATE TABLE Usuario(
 usuarioID INT IDENTITY PRIMARY KEY NOT NULL,
@@ -17,8 +17,11 @@ rol VARCHAR(50)
 CREATE TABLE Restaurante(
 restauranteID INT IDENTITY PRIMARY KEY NOT NULL,
 nombre VARCHAR(50),
+descripcion VARCHAR(50),
 lugar VARCHAR(50),
 telefono VARCHAR(50),
+latitud VARCHAR(50),
+longitud VARCHAR(50),
 usuarioID INT FOREIGN KEY REFERENCES Usuario
 );
 
@@ -26,8 +29,6 @@ CREATE TABLE Producto(
 productoID INT IDENTITY PRIMARY KEY NOT NULL,
 nombre VARCHAR(50),
 descripcion TEXT,
-precio MONEY,
-stock INT,
 IMAGEN TEXT,
 categoria VARCHAR(50)
 );
@@ -44,14 +45,6 @@ CREATE TABLE Menu_Producto(
 MenuProductoID INT IDENTITY PRIMARY KEY,
 menuID INT FOREIGN KEY REFERENCES Menu NOT NULL,
 productoID INT FOREIGN KEY REFERENCES Producto NOT NULL
-);
-
-CREATE TABLE LikeMenu(
-LikeMenuID INT IDENTITY PRIMARY KEY NOT NULL,
-valor BIT,
-fecha DATETIME,
-usuarioID INT FOREIGN KEY REFERENCES Usuario,
-menuID INT FOREIGN KEY REFERENCES Menu
 );
 
 CREATE TABLE LikeProducto(
