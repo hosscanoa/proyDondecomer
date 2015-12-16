@@ -25,7 +25,6 @@ namespace proyDondecomer.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<LikeMenu> LikeMenu { get; set; }
         public DbSet<LikeProducto> LikeProducto { get; set; }
         public DbSet<Menu> Menu { get; set; }
         public DbSet<Menu_Producto> Menu_Producto { get; set; }

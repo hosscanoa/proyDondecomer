@@ -1,8 +1,13 @@
+USE MASTER
+go
 
---CREATE DATABASE dondeComer
---go
+DROP DATABASE dondeComer
+go
 
---USE dondeComer;
+CREATE DATABASE dondeComer
+go
+
+USE dondeComer;
 
 CREATE TABLE Usuario(
 usuarioID INT IDENTITY PRIMARY KEY NOT NULL,
@@ -29,16 +34,16 @@ CREATE TABLE Producto(
 productoID INT IDENTITY PRIMARY KEY NOT NULL,
 nombre VARCHAR(50),
 descripcion TEXT,
-IMAGEN TEXT,
+imagen TEXT,
 categoria VARCHAR(50)
 );
 
 CREATE TABLE Menu(
 menuID INT IDENTITY PRIMARY KEY NOT NULL,
 nombre VARCHAR(50),
-fecha DATETIME,
+fecha DATE,
 precio MONEY,
-pestauranteID INT FOREIGN KEY REFERENCES Restaurante
+restauranteID INT FOREIGN KEY REFERENCES Restaurante
 );
 
 CREATE TABLE Menu_Producto(
@@ -50,7 +55,7 @@ productoID INT FOREIGN KEY REFERENCES Producto NOT NULL
 CREATE TABLE LikeProducto(
 LikeProductoID INT IDENTITY PRIMARY KEY NOT NULL,
 valor BIT,
-fecha DATETIME,
+fecha DATE,
 usuarioID INT FOREIGN KEY REFERENCES Usuario,
 productoID INT FOREIGN KEY REFERENCES Producto
 );

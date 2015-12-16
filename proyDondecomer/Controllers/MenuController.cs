@@ -29,7 +29,7 @@ namespace proyDondecomer.Controllers
         // GET api/Menu/5
         public Menu GetMenu(int idRestaurante)
         {
-            Menu menu = db.Menu.Where(p => p.pestauranteID == idRestaurante).FirstOrDefault();
+            Menu menu = db.Menu.Where(p => p.restauranteID == idRestaurante).FirstOrDefault();
 
             return menu;
         }

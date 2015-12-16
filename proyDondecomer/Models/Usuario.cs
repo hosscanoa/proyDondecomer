@@ -16,7 +16,6 @@ namespace proyDondecomer.Models
     {
         public Usuario()
         {
-            this.LikeMenu = new HashSet<LikeMenu>();
             this.LikeProducto = new HashSet<LikeProducto>();
             this.Restaurante = new HashSet<Restaurante>();
         }
@@ -29,7 +28,6 @@ namespace proyDondecomer.Models
         public string password { get; set; }
         public string rol { get; set; }
     
-        public virtual ICollection<LikeMenu> LikeMenu { get; set; }
         public virtual ICollection<LikeProducto> LikeProducto { get; set; }
         public virtual ICollection<Restaurante> Restaurante { get; set; }
     }

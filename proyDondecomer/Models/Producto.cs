@@ -23,7 +23,7 @@ namespace proyDondecomer.Models
         public int productoID { get; set; }
         public string nombre { get; set; }
         public string descripcion { get; set; }
-        public string IMAGEN { get; set; }
+        public string imagen { get; set; }
         public string categoria { get; set; }
     
         public virtual ICollection<LikeProducto> LikeProducto { get; set; }

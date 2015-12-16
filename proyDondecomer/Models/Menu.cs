@@ -16,7 +16,6 @@ namespace proyDondecomer.Models
     {
         public Menu()
         {
-            this.LikeMenu = new HashSet<LikeMenu>();
             this.Menu_Producto = new HashSet<Menu_Producto>();
         }
     
@@ -24,9 +23,8 @@ namespace proyDondecomer.Models
         public string nombre { get; set; }
         public Nullable<System.DateTime> fecha { get; set; }
         public Nullable<decimal> precio { get; set; }
-        public Nullable<int> pestauranteID { get; set; }
+        public Nullable<int> restauranteID { get; set; }
     
-        public virtual ICollection<LikeMenu> LikeMenu { get; set; }
         public virtual Restaurante Restaurante { get; set; }
         public virtual ICollection<Menu_Producto> Menu_Producto { get; set; }
     }
