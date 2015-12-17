@@ -19,60 +19,22 @@ namespace proyDondecomer.Controllers
         }
         
         //Top 5 de menus más consumidos
-        public IEnumerable<LikeProducto> GetEstadistica()
+        public IEnumerable<PChart> GetEstadistica()
         {
-
-
-            var lista = db.LikeProducto.GroupBy(i => i.productoID)
-                        .Select(g => new { Count = g.Count() });
-
-
-
-                
-               /* from l in db.LikeProducto
-                        .GroupBy(l => l.productoID)
-                        select new{
-                            
-                        };*/
-            
-            /*var like = db.LikeProducto.ToList();
-            return like.AsEnumerable();*/
-            return lista as IEnumerable<LikeProducto>;
-        }
-
-        /*
-         * LO DE SQL SERVER
-         * 
-         select top 5  m.nombre as 'NombreMenu', COUNT(*) as 'CantidadLike' from LikeProducto l inner join Menu m
-on l.productoID = m.menuID
-group by productoID, m.nombre
-order by CantidadLike desc
-         */
-
-
-        /*
-        public IEnumerable<Menu> GetTopMenu()
-        {
-             int total;
-
-             var lista = from l in db.LikeProducto
-                         group l by l.productoID into g
-                         select new 
-                         {
-                            Menu = g.Key, total =  g.Count()
-                         };
+            var results = (from T1 in db.Menu_Producto
+                          join T2 in db.Menu on T1.menuID equals T2.menuID
+                          group T1 by new { T2.nombre} into xml
+                          select new {
+                            title = xml.Key.nombre,
+                            value = xml.Count()
+                          }).Take(5);
+            List<PChart> listaChart = new List<PChart>();
+            foreach (var r in results.ToList()){
+                listaChart.Add(new PChart(){title=r.title, value=r.value});
+            }
            
-            var menu = db.Menu.ToList();
-            return menu.AsEnumerable();
-        }*/
-
-
-        //Top 5 de restaurantes por frecuencia de personas
-        //Top 5 de restaurantes con más likes
-        
-        //El menu más consumido por mes
-        //El restaurante más visitado por mes
-        //
+            return listaChart as IEnumerable<PChart>;
+        }
         protected override void Dispose(bool disposing)
         {
             db.Dispose();
