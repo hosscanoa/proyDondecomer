@@ -1,13 +1,13 @@
-USE MASTER
-go
+--USE MASTER
+--go
 
-DROP DATABASE dondeComer
-go
+--DROP DATABASE dondeComer
+--go
 
-CREATE DATABASE dondeComer
-go
+--CREATE DATABASE dondeComer
+--go
 
-USE dondeComer;
+--USE dondeComer;
 
 CREATE TABLE Usuario(
 usuarioID INT IDENTITY PRIMARY KEY NOT NULL,

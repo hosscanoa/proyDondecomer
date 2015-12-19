@@ -1,5 +1,5 @@
-insert into Usuario (nombre, apellidos, celular, usuario, password, rol) values ('Howard', 'Stewart', '996123020', 'hstewart0', '679', 'administrador');
-insert into Usuario (nombre, apellidos, celular, usuario, password, rol) values ('Louis', 'Stevens', '995851435', 'lstevens1', '517', 'administrador');
+insert into Usuario (nombre, apellidos, celular, usuario, password, rol) values ('Javier', 'Huaman', '996123020', 'jhuaman', '123', 'administrador');
+insert into Usuario (nombre, apellidos, celular, usuario, password, rol) values ('Hernan', 'Oscanoa', '995851435', 'hoscanoa', '123', 'administrador');
 insert into Usuario (nombre, apellidos, celular, usuario, password, rol) values ('Ruth', 'Boyd', '905740720', 'rboyd2', '536', 'administrador');
 insert into Usuario (nombre, apellidos, celular, usuario, password, rol) values ('Gregory', 'Brown', '935329431', 'gbrown3', '477', 'administrador');
 insert into Usuario (nombre, apellidos, celular, usuario, password, rol) values ('Russell', 'Austin', '940220868', 'raustin4', '488', 'administrador');
@@ -15,8 +15,8 @@ insert into Usuario (nombre, apellidos, celular, usuario, password, rol) values 
 insert into Usuario (nombre, apellidos, celular, usuario, password, rol) values ('Katherine', 'Oliver', '916717828', 'kolivere', '675', 'administrador');
 
 
-insert into Usuario (nombre, apellidos, celular, usuario, password, rol) values ('Judy', 'Sanders', '966865846', 'jsanders0', '559', 'cliente');
-insert into Usuario (nombre, apellidos, celular, usuario, password, rol) values ('Sarah', 'Cunningham', '901518774', 'scunningham1', '543', 'cliente');
+insert into Usuario (nombre, apellidos, celular, usuario, password, rol) values ('Juan', 'Anton', '966865846', 'janton', '123', 'cliente');
+insert into Usuario (nombre, apellidos, celular, usuario, password, rol) values ('Romario', 'Vargas', '901518774', 'rvargas', '123', 'cliente');
 insert into Usuario (nombre, apellidos, celular, usuario, password, rol) values ('Ryan', 'Burke', '967738399', 'rburke2', '658', 'cliente');
 insert into Usuario (nombre, apellidos, celular, usuario, password, rol) values ('Gregory', 'Gonzales', '925717994', 'ggonzales3', '554', 'cliente');
 insert into Usuario (nombre, apellidos, celular, usuario, password, rol) values ('Karen', 'Freeman', '940566220', 'kfreeman4', '537', 'cliente');
@@ -517,21 +517,21 @@ insert into Usuario (nombre, apellidos, celular, usuario, password, rol) values 
 insert into Usuario (nombre, apellidos, celular, usuario, password, rol) values ('Eric', 'Fisher', '955400392', 'efisherdv', '861', 'cliente');
 
 
-insert into Restaurante (nombre, descripcion, lugar, telefono, usuarioID) values ('Judy', 'Puce', 'Lima', '9-889-934', 1);
-insert into Restaurante (nombre, descripcion, lugar, telefono, usuarioID) values ('Carol', 'Purple', 'Lima', '0-444-373', 2);
-insert into Restaurante (nombre, descripcion, lugar, telefono, usuarioID) values ('Mark', 'Pink', 'Lima', '1-500-748', 3);
-insert into Restaurante (nombre, descripcion, lugar, telefono, usuarioID) values ('Amy', 'Orange', 'Lima', '9-989-756', 4);
-insert into Restaurante (nombre, descripcion, lugar, telefono, usuarioID) values ('Justin', 'Indigo', 'Lima', '6-200-552', 5);
-insert into Restaurante (nombre, descripcion, lugar, telefono, usuarioID) values ('Laura', 'Teal', 'Lima', '5-796-403', 6);
-insert into Restaurante (nombre, descripcion, lugar, telefono, usuarioID) values ('John', 'Green', 'Lima', '6-554-217', 7);
-insert into Restaurante (nombre, descripcion, lugar, telefono, usuarioID) values ('Andrea', 'Teal', 'Lima', '0-141-248', 8);
-insert into Restaurante (nombre, descripcion, lugar, telefono, usuarioID) values ('Sean', 'Pink', 'Lima', '2-966-233', 9);
-insert into Restaurante (nombre, descripcion, lugar, telefono, usuarioID) values ('Donald', 'Puce', 'Lima', '8-528-497', 10);
-insert into Restaurante (nombre, descripcion, lugar, telefono, usuarioID) values ('Earl', 'Blue', 'Lima', '2-021-723', 11);
-insert into Restaurante (nombre, descripcion, lugar, telefono, usuarioID) values ('Barbara', 'Blue', 'Lima', '3-075-591', 12);
-insert into Restaurante (nombre, descripcion, lugar, telefono, usuarioID) values ('Larry', 'Teal', 'Lima', '5-269-568', 13);
-insert into Restaurante (nombre, descripcion, lugar, telefono, usuarioID) values ('Joshua', 'Crimson', 'Lima', '9-108-353', 14);
-insert into Restaurante (nombre, descripcion, lugar, telefono, usuarioID) values ('Katherine', 'Red', 'Lima', '4-852-477', 15);
+insert into Restaurante (nombre, descripcion, lugar, telefono, usuarioID, latitud, longitud) values ('China Wok', 'Chifa', 'Lima', '9-889-934', 1,'-11.994670', '-77.061356');
+insert into Restaurante (nombre, descripcion, lugar, telefono, usuarioID, latitud, longitud) values ('Mirter Shao', 'Chifa', 'Lima', '0-444-373', 2,'-11.994082', '-77.060830');
+insert into Restaurante (nombre, descripcion, lugar, telefono, usuarioID, latitud, longitud) values ('D Parrillas', 'Carnes y Parrillas', 'Lima', '1-500-748', 3, '11.994967', '-77.061509');
+insert into Restaurante (nombre, descripcion, lugar, telefono, usuarioID, latitud, longitud) values ('Muelle 51', 'Cevichería', 'Lima', '9-989-756', 4,'-11.994219','-77.060444');
+insert into Restaurante (nombre, descripcion, lugar, telefono, usuarioID, latitud, longitud) values ('El Veredicto de Fidel', 'Criollo', 'Lima', '6-200-552', 5,'-11.992264', '-77.059803');
+insert into Restaurante (nombre, descripcion, lugar, telefono, usuarioID, latitud, longitud) values ('Hielo RestoBar', 'Criollo', 'Lima', '5-796-403', 6,'-11.992610', '-77.059572');
+insert into Restaurante (nombre, descripcion, lugar, telefono, usuarioID, latitud, longitud) values ('Kilimanjaro', 'Criollo', 'Lima', '6-554-217', 7,'-11.991530', '-77.063542');
+insert into Restaurante (nombre, descripcion, lugar, telefono, usuarioID, latitud, longitud) values ('El Aguajal', 'Amazónica', 'Lima', '0-141-248', 8,'-11.991530', '-77.063542');
+insert into Restaurante (nombre, descripcion, lugar, telefono, usuarioID, latitud, longitud) values ('Mr. Cuy', 'Criolla y Andina', 'Lima', '2-966-233', 9,'-11.990005', '-77.066222');
+insert into Restaurante (nombre, descripcion, lugar, telefono, usuarioID, latitud, longitud) values ('North Fish', 'Cevichería', 'Lima', '8-528-497', 10,'11.990624', '-77.066389');
+insert into Restaurante (nombre, descripcion, lugar, telefono, usuarioID, latitud, longitud) values ('Cafetín Cibertec', 'Criolla', 'Lima', '2-021-723', 11,'-11.990141', '-77.060456');
+insert into Restaurante (nombre, descripcion, lugar, telefono, usuarioID, latitud, longitud) values ('El Arequipeño', 'Andina', 'Lima', '3-075-591', 12,'-11.989879', '-77.064677');
+insert into Restaurante (nombre, descripcion, lugar, telefono, usuarioID, latitud, longitud) values ('Mc Donals', 'Teal', 'Lima', '5-269-568', 13,'-11.990246', '-77.063224');
+insert into Restaurante (nombre, descripcion, lugar, telefono, usuarioID, latitud, longitud) values ('Mi Carcochita', 'Criolla', 'Lima', '9-108-353', 14,'-11.989915', '-77.061645');
+insert into Restaurante (nombre, descripcion, lugar, telefono, usuarioID, latitud, longitud) values ('Katherine', 'Variado', 'Lima', '4-852-477', 15,'-11.989168','-77.060835');
 
 
 insert into Producto (nombre, descripcion, imagen, categoria) values ('Jessica', 'Aspergillus repens', 'http://peruanosenusa.net/wp-content/gallery/nuestra-mesa/247d1328072357-lomo-saltado-receta-lomo_saltado.jpg', 'entrada');
