@@ -169,6 +169,7 @@
     <Compile Include="Controllers\PlatoController.cs" />
     <Compile Include="Controllers\PlatoMenuController.cs" />
     <Compile Include="Controllers\RestauranteController.cs" />
+    <Compile Include="Controllers\ResumenController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
